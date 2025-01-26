@@ -55,7 +55,7 @@ async def serial_read():
     line = ''
     while ser.in_waiting > 0:
         line = ser.readline().decode('utf-8').strip()
-        print(line)
+    print(line)
     return line
 
 if __name__ == "__main__":
