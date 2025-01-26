@@ -1,5 +1,7 @@
 uvicorn
-numpy
 fastapi
 pyserial
-opencv-python
+
+# for notation_to_parameter.py (not required for now)
+# numpy
+# opencv-python

@@ -2,10 +2,8 @@ import traceback
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from .notation_to_parameter import notation_to_parameters
 import base64
 from pydantic import BaseModel
-import numpy as np
 import json
 import serial
 
@@ -31,6 +29,9 @@ app.add_middleware(
 @app.post("/analyze-notation")
 async def analyze_notation(request: Request):
     """Process base64 encoded image data"""
+    
+    from .notation_to_parameter import notation_to_parameters
+    import numpy as np
     try:
         # Print raw request body
         body = await request.body()
